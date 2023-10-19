@@ -14,7 +14,15 @@ public class Produto()
   }
   public String getNome()
   {
-		return nome;
-	}
+	return nome;
+  }
+ public int getId()
+ {
+	 return id;
+ }
+ public int getValor()
+ {
+	 return valor;
+ }
   
 }
