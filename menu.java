@@ -8,8 +8,8 @@ public class Menu
 	
 	public void Processamento() 
   {
-    int valor;
-    int quant;
+    		int valor;
+   		int quant;
 		String nome = "";
 		int id;
 		Scanner sc = new Scanner(System.in);
@@ -17,20 +17,20 @@ public class Menu
 		
 	
 		
-			do 
-      {
-				System.out.println("Digite a opção:");
-				System.out.println("1- Incluir produto no carrinho: ");
-				System.out.println("2- Adicionar produto ao carrinho: ");
-				System.out.println("3- Listar o carrinho: ");
-				System.out.println("4- Sair ");
+		do 
+     		{
+			System.out.println("Digite a opção:");
+			System.out.println("1- Incluir produto no carrinho: ");
+			System.out.println("2- Adicionar produto ao carrinho: ");
+			System.out.println("3- Listar o carrinho: ");
+			System.out.println("4- Sair ");
 				
-				opcao = sc.nextInt();
+			opcao = sc.nextInt();
 				
-				System.out.println("opção é: " + opcao);
+			System.out.println("opção é: " + opcao);
 				
-				switch(opcao)
-				{
+			switch(opcao)
+			{
 				case 1:
 					IncluirProduto();
 					break;
@@ -47,7 +47,7 @@ public class Menu
 					
 				default:
 					System.out.println("Opção inválida!!!");
-				}
+			}
 				
 				
 			} while(opcao!=4);
@@ -55,7 +55,7 @@ public class Menu
 					
 	}
 	public Boolean IncluirProduto() 
-  {
+ 	 {
 		int valor;
 		String nome="";
 		int id;
@@ -71,27 +71,38 @@ public class Menu
 		Produto produto = new Produto(nome,id,valor);
 			
 		produtos.add(produto);
-    System.out.println("Produto incluido!");
+    		System.out.println("Produto incluido!");
 		
 		return true;
 	}
-  public Boolean AdicionarProduto()
-  {
-    int quant;
-    int prodId;
+	public Boolean AdicionarProduto()
+	  {
+		int quant;
+    		int prodId;
     
-	  System.out.println("Digite o id do produto a ser adicionado ao carrinho:");
-    prodId=sc.next();
+	 	System.out.println("Digite o id do produto a ser adicionado ao carrinho:");
+    		prodId=sc.next();
+		if(buscarProduto()!=true)
+		{
+			System.out.println("Produto não existe!!Retornando ao menu");
+			return false;
+		}
+		else
+		{
+			
+		
+			System.out.println("Digite a quantidade:");
+			quant=sc.next();
+			
+		
+		}
     
-    
-
-
-    
-    return true;
-  }
+    		return true;
+ 	}
 
 	public void ListarCarrinho() 
-  {
+  	{
+		
 		
 	}
 
